@@ -4,7 +4,7 @@
   "available": true,
   "short_desc": "Logging utility for your car",
   "author": "lubelogger",
-  "port": 8404,
+  "port": 8405,
   "categories": ["utilities"],
   "description": "LubeLogger is a web-based vehicle maintenance and fuel mileage tracker.",
   "tipi_version": 4,
@@ -35,5 +35,5 @@
       "env_variable": "SMTP_PASSWORD"
     }
   ],
-  "supported_architectures": ["arm64", "amd64"]
+  "supported_architectures": ["amd64"]
 }
