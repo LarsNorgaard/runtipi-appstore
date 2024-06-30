@@ -1,0 +1,39 @@
+{
+  "name": "Lubelogger",
+  "id": "lubelogger",
+  "available": true,
+  "short_desc": "Logging utility for your car",
+  "author": "lubelogger",
+  "port": 8404,
+  "categories": ["utilities"],
+  "description": "LubeLogger is a web-based vehicle maintenance and fuel mileage tracker.",
+  "tipi_version": 4,
+  "version": "1.3.4",
+  "source": "https://github.com/hargata/lubelog",
+  "website": "https://lubelogger.com/",
+  "exposable": true,
+  "force_expose": false,
+  "form_fields": [
+    {
+      "type": "random",
+      "label": "Postgres Password",
+      "min": 32,
+      "env_variable": "POSTGRES_PASSWORD"
+    },
+    {
+      "type": "text",
+      "label": "SMTP Username",
+      "min": 1,
+      "required": false,
+      "env_variable": "SMTP_USERNAME"
+    },
+    {
+      "type": "password",
+      "label": "SMTP Password",
+      "min": 1,
+      "required": false,
+      "env_variable": "SMTP_PASSWORD"
+    }
+  ],
+  "supported_architectures": ["arm64", "amd64"]
+}
