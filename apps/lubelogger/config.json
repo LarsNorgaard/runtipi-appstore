@@ -15,24 +15,11 @@
   "force_expose": false,
   "form_fields": [
     {
-      "type": "random",
-      "label": "Postgres Password",
-      "min": 32,
-      "env_variable": "POSTGRES_PASSWORD"
-    },
-    {
       "type": "text",
-      "label": "SMTP Username",
+      "label": "LC_ALL Username",
       "min": 1,
       "required": false,
-      "env_variable": "SMTP_USERNAME"
-    },
-    {
-      "type": "password",
-      "label": "SMTP Password",
-      "min": 1,
-      "required": false,
-      "env_variable": "SMTP_PASSWORD"
+      "env_variable": "LC_ALL"
     }
   ],
   "supported_architectures": ["amd64"]

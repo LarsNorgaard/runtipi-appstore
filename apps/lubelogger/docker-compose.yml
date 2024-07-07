@@ -3,18 +3,12 @@ version: "3.8"
 services:
   outline:
     container_name: lubelogger
-    image: ghcr.io/hargata/lubelogger:latest
+    image: ghcr.io/hargata/lubelogger:1.3.4
     restart: unless-stopped
     environment:
-      - POSTGRES_CONNECTION="Host=lubelogger-postgres;Username=lubelogger;Password=${POSTGRES_PASSWORD};Database=lubelogger;"
-      - LC_ALL=en_US.UTF-8
-      - LANG=en_US.UTF-8
-      - MailConfig__EmailServer=""
-      - MailConfig__EmailFrom=""
-      - MailConfig__UseSSL="false"
-      - MailConfig__Port=587
-      - MailConfig__Username="${SMTP_USERNAME}"
-      - MailConfig__Password="${SMTP_PASSWORD}"
+      #- POSTGRES_CONNECTION="Host=lubelogger-postgres;Username=lubelogger;Password=${POSTGRES_PASSWORD};Database=lubelogger;"
+      - LC_ALL=${LC_ALL}
+      - LANG=${LC_ALL}
       - LOGGING__LOGLEVEL__DEFAULT=Error
     volumes:
       - ${APP_DATA_DIR}/data/lubelogger/config:/App/config
@@ -27,25 +21,25 @@ services:
       - ${APP_DATA_DIR}/data/lubelogger/keys:/root/.aspnet/DataProtection-Keys
     ports:
       - ${APP_PORT}:8080
-    depends_on:
-      - lubelogger-postgres
+    # depends_on:
+    #   - lubelogger-postgres
     networks:
       - tipi_main_network
 
-  lubelogger-postgres:
-    container_name: lubelogger-postgres
-    image: postgres:16-alpine
-    restart: unless-stopped
-    environment:
-      - POSTGRES_USER=lubelogger
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - POSTGRES_DB=lubelogger
-    volumes:
-      - ${APP_DATA_DIR}/db:/var/lib/postgresql/data
-    networks:
-      - tipi_main_network
-    healthcheck:
-      test: ["CMD", "pg_isready"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+  # lubelogger-postgres:
+  #   container_name: lubelogger-postgres
+  #   image: postgres:16-alpine
+  #   restart: unless-stopped
+  #   environment:
+  #     - POSTGRES_USER=lubelogger
+  #     - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+  #     - POSTGRES_DB=lubelogger
+  #   volumes:
+  #     - ${APP_DATA_DIR}/db:/var/lib/postgresql/data
+  #   networks:
+  #     - tipi_main_network
+  #   healthcheck:
+  #     test: ["CMD", "pg_isready"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
