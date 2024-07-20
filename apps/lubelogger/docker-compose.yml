@@ -25,6 +25,9 @@ services:
     #   - lubelogger-postgres
     networks:
       - tipi_main_network
+    labels:
+      runtipi.managed: true
+
 
   # lubelogger-postgres:
   #   container_name: lubelogger-postgres
