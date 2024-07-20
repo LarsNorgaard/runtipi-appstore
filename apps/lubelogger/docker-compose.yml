@@ -6,6 +6,7 @@ services:
     image: ghcr.io/hargata/lubelogger:v1.3.4
     restart: unless-stopped
     environment:
+      #- POSTGRES_CONNECTION="Host=lubelogger-postgres;Username=lubelogger;Password=${POSTGRES_PASSWORD};Database=lubelogger;"
       - LC_ALL=${LC_ALL}
       - LANG=${LC_ALL}
       - LOGGING__LOGLEVEL__DEFAULT=Error
@@ -20,7 +21,28 @@ services:
       - ${APP_DATA_DIR}/data/lubelogger/keys:/root/.aspnet/DataProtection-Keys
     ports:
       - ${APP_PORT}:8080
+    # depends_on:
+    #   - lubelogger-postgres
     networks:
       - tipi_main_network
     labels:
       runtipi.managed: true
+
+
+  # lubelogger-postgres:
+  #   container_name: lubelogger-postgres
+  #   image: postgres:16-alpine
+  #   restart: unless-stopped
+  #   environment:
+  #     - POSTGRES_USER=lubelogger
+  #     - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+  #     - POSTGRES_DB=lubelogger
+  #   volumes:
+  #     - ${APP_DATA_DIR}/db:/var/lib/postgresql/data
+  #   networks:
+  #     - tipi_main_network
+  #   healthcheck:
+  #     test: ["CMD", "pg_isready"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
