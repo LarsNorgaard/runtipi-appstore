@@ -3,6 +3,8 @@
   "id": "lubelogger",
   "available": true,
   "short_desc": "Logging utility for your car",
+  "tipi_version": 20,
+  "version": "1.3.4",
   "author": "lubelogger",
   "port": 8406,
   "categories": ["utilities"],
