@@ -9,7 +9,6 @@
   "port": 8406,
   "categories": ["utilities"],
   "description": "LubeLogger is a web-based vehicle maintenance and fuel mileage tracker.",
-  "tipi_version": 4,
   "source": "https://github.com/hargata/lubelog",
   "website": "https://lubelogger.com/",
   "exposable": true,
