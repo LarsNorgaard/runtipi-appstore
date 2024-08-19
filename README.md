@@ -10,7 +10,7 @@ If you want to see new apps on Tipi you can either:
 - [Join the Discord](https://discord.gg/Bu9qEPnHsc) members of the community will add it.
 - Fork this repo and create the necessary files for a Tipi app. Follow this [guide](https://www.runtipi.io/docs/contributing/adding-a-new-app)`
 
-## Apps available (251)
+## Apps available (252)
 
 | Name                                                                         | Description                                                                                                                                                         | Port  |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
@@ -135,6 +135,7 @@ If you want to see new apps on Tipi you can either:
 | [Lobe Chat](https://github.com/lobehub/lobe-chat)                            | LLM chatbot framework                                                                                                                                               | 3210  |
 | [Lodestone Core](https://github.com/Lodestone-Team/lodestone_core)           | Server hosting tool for Minecraft and other multiplayers.                                                                                                           | 16662 |
 | [Logto](https://github.com/logto-io/logto)                                   | Logto is a cost-effective open-source alternative to Auth0.                                                                                                         | 8203  |
+| [lubelogger](https://github.com/hargata/lubelog)                             | Logging utility for your car                                                                                                                                        | 8406  |
 | [Maintainerr](https://github.com/jorenn92/Maintainerr)                       | Maintainerr will manage the storage space on your plex server, launching automated actions to delete your files.                                                    | 8030  |
 | [Mastodon](https://github.com/mastodon/mastodon)                             | Your self-hosted, globally interconnected microblogging community                                                                                                   | 8210  |
 | [Conduit](https://gitlab.com/famedly/conduit)                                | Conduit is a simple, fast and reliable chat server written in Rust                                                                                                  | 6167  |
